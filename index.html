@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartRecipe</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>SmartRecipe</h1>
+    <nav>
+      <ul>
+        <li><a href="#" onclick="navigate('home')">Home</a></li>
+        <li><a href="#" onclick="navigate('profile')">Profile</a></li>
+        <li><a href="#" onclick="navigate('recipes')">Recipes</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section id="home" class="content-section">
+      <h2>Discover Recipes</h2>
+      <div id="instacook">
+        <input type="text" id="ingredients" placeholder="Enter ingredients (comma separated)">
+        <button onclick="findRecipes()">Find Recipes</button>
+      </div>
+      <div id="recipe-list" class="recipe-container"></div>
+    </section>
+
+    <section id="profile" class="content-section">
+      <h2>Profile</h2>
+      <p>Manage your preferences and dietary restrictions.</p>
+      <form id="profile-form">
+        <label for="diet">Dietary Preference:</label>
+        <select id="diet">
+          <option value="">Select...</option>
+          <option value="vegetarian">Vegetarian</option>
+          <option value="vegan">Vegan</option>
+          <option value="gluten-free">Gluten-Free</option>
+        </select>
+        <button type="button" onclick="saveProfile()">Save</button>
+      </form>
+    </section>
+
+    <section id="recipes" class="content-section">
+      <h2>Your Recipes</h2>
+      <div id="saved-recipe-list" class="recipe-container"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 SmartRecipe. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
